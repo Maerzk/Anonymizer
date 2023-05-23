@@ -1,4 +1,4 @@
-from Anonymize import *
+from anonymize import *
 
 if __name__ == '__main__':
     print("Input sentence to anonymize here:")

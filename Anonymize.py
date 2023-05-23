@@ -9,4 +9,9 @@ example = "My name is Nick and I live in Berlin"
 
 def anonymize(sentence):
     ner_results = nlp(sentence)
-    return ner_results
+    print(ner_results)
+
+    for i in ner_results:
+        sentence = sentence.replace(i["word"], "[]")
+    
+    return sentence
