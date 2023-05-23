@@ -5,9 +5,8 @@ tokenizer = AutoTokenizer.from_pretrained("dslim/bert-base-NER")
 model = AutoModelForTokenClassification.from_pretrained("dslim/bert-base-NER")
 
 nlp = pipeline("ner", model=model, tokenizer=tokenizer)
-example = "My name is Jeff and I live in Berlin"
+example = "My name is Nick and I live in Berlin"
 
-ner_results = nlp(example)
-print(ner_results)
-
-input()
+def anonymize(sentence):
+    ner_results = nlp(sentence)
+    return ner_results
